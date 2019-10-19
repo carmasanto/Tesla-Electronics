@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tesla Electronics</title>
+    <meta author = "Carlos Mario Sanchez"/>
+    <meta description = "Aplicativo web para el proceso de compra-venta de la tienda Tesla Electronics"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style >
+    .nav-item{
+      margin: 0 5%;
+    }
+    #titulos{
+      font-size:135%;
+    }
+      #titulos:hover{
+        background-color: #ddd;
+        color: black;
+      }
+      #desplegable a:hover{
+        background-color: #34495E;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #D5DBDB">
+    <div>
+      <img src="imagenes/fondo.jpg" width="100%" height="200" alt="logo Tesla Electronics">
+      <div class="text" style="position: absolute; top: 40px; right: 70px; color: #FDFEFE; font-size: 80px">
+        Tesla Electronics
+      </div>
+    </div>
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #333; width: 100%">
+  <!-- Brand -->
+<img src="imagenes/componentes.png" width="55" alt="Logo" style="margin:0 1%">
+<a href="index.html" style="margin:0 8%"><img src="imagenes/home.png" width="50" alt="home"></a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" id="titulos" href="Administrador.html">Administrador</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="titulos" data-toggle="dropdown">
+        Inventario
+      </a>
+      <div class="dropdown-menu" id="desplegable">
+        <a class="dropdown-item" href="Ingresar.html">Ingresar</a>
+        <a class="dropdown-item" href="Actualizar.html">Actualizar</a>
+        <a class="dropdown-item" href="Consultar.html">Consultar</a>
+        <a class="dropdown-item" href="Eliminar.html">Eliminar</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="titulos" href="Ventas.html">Ventas</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="titulos" data-toggle="dropdown">
+        Utilidades
+      </a>
+      <div class="dropdown-menu" id="desplegable">
+        <a class="dropdown-item" href="Utilidades.html">Utilidades</a>
+        <a class="dropdown-item" href="Calculadora Resistencias.html">Calculadora Resistencias</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div align="center" style="margin-top: 2%">
+  <h1>Inventario</h1>
+  <h3>Formulario Consultar</h3>
+</div>
+
+<div style="border-style: ridge; border-width: 5px; border-color: white; width: 95%; height: 330px; padding: 40px; margin: 1% 2% 5% 2%; background-color: #5D6D7E">
+
+  <div style="border-style: solid; border-width: 1px; border-color: black; width: 46%; height: 230px; float: left">
+  <div class="form-inline" style="margin: 10% 0 5% 3%">
+    <h4 style="color: white">
+      <label for="codigo">Código Producto</label>
+    </h4>
+    <input type="text" class="form-control" id="codigo" style="border-style: solid; border-width: 1px; border-color: white; background-color: transparent; width: 55%; color: white; margin-left: 5%">
+  </div>
+  <button type="button" class="btn btn-warning" onclick="consultar()" style="width: 50%; height: 40px; margin: 0 0 3% 25%">Consultar</button>
+  </div>
+
+  <div style="border-style: solid; border-width: 1px; border-color: black; width: 49%; height: 230px; float: left; margin-left: 5%">
+  <div class="form-inline" style="margin: 10% 0 5% 3%">
+    <h4 style="color: white">
+      <label for="nombre">Nombre Producto</label>
+    </h4>
+    <input type="text" class="form-control" id="nombre" style="border-style: solid; border-width: 1px; border-color: white; background-color: transparent; width: 55%; color: white; margin-left: 3%">
+  </div>
+
+  <div class="form-inline" style="margin: 5% 0 5% 3%">
+    <h4 style="color: white">
+      <label for="marca">Marca Producto</label>
+    </h4>
+    <input type="text" class="form-control" id="marca" style="border-style: solid; border-width: 1px; border-color: white; background-color: transparent; width: 55%; color: white; margin-left: 7%">
+  </div>
+  </div>
+  </div>
+  </body>
+  <footer class="py-4 bg-dark text-white-50">
+    <div style="float: left; margin-left: 5%">
+      Copyright (C) Tesla Electronics 2019 - Todos los derechos Reservados.
+    </div>
+    <div align = "right" style="margin-right: 5%">
+      <a class="fb-ic mr-3" role="button" href="https://es-la.facebook.com"><i class="fab fa-lg fa-facebook-f"></i></a>
+      <a class="tw-ic mr-3" role="button" href="https://twitter.com"><i class="fab fa-lg fa-twitter"></i></a>
+      <a class="ins-ic mr-3" role="button" href="https://www.instagram.com"><i class="fab fa-lg fa-instagram"></i></a>
+    </div>
+  </footer>
+  </html>

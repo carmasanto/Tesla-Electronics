@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tesla Electronics</title>
+    <meta author = "Carlos Mario Sanchez"/>
+    <meta description = "Aplicativo web para el proceso de compra-venta de la tienda Tesla Electronics"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style >
+    .nav-item{
+      margin: 0 5%;
+    }
+    #titulos{
+      font-size:135%;
+    }
+      #titulos:hover{
+        background-color: #ddd;
+        color: black;
+      }
+      #desplegable a:hover{
+        background-color: #34495E;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #D5DBDB">
+    <div>
+      <img src="imagenes/fondo.jpg" width="100%" height="200" alt="logo Tesla Electronics">
+      <div class="text" style="position: absolute; top: 40px; right: 70px; color: #FDFEFE; font-size: 80px">
+        Tesla Electronics
+      </div>
+    </div>
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #333; width: 100%">
+  <!-- Brand -->
+<img src="imagenes/componentes.png" width="55" alt="Logo" style="margin:0 1%">
+<a href="index.html" style="margin:0 8%"><img src="imagenes/home.png" width="50" alt="home"></a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" id="titulos" href="Administrador.html">Administrador</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="titulos" data-toggle="dropdown">
+        Inventario
+      </a>
+      <div class="dropdown-menu" id="desplegable">
+        <a class="dropdown-item" href="Ingresar.html">Ingresar</a>
+        <a class="dropdown-item" href="Actualizar.html">Actualizar</a>
+        <a class="dropdown-item" href="Consultar.html">Consultar</a>
+        <a class="dropdown-item" href="Eliminar.html">Eliminar</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="titulos" href="Ventas.html">Ventas</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="titulos" data-toggle="dropdown">
+        Utilidades
+      </a>
+      <div class="dropdown-menu" id="desplegable">
+        <a class="dropdown-item" href="Utilidades.html">Utilidades</a>
+        <a class="dropdown-item" href="Calculadora Resistencias.html">Calculadora Resistencias</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div align="center" style="margin-top: 2%">
+  <h1>Utilidades</h1>
+  <h3>Formulario Calcular Valor Resistencias</h3>
+</div>
+
+<script type="text/javascript">
+
+var num1,num2,num3;
+
+  function franja1() {
+
+    var negro1 = document.getElementById("btn1");
+    var cafe1 = document.getElementById("btn2");
+    var rojo1 = document.getElementById("btn3");
+    var naranja1 = document.getElementById("btn4");
+    var amarillo1 = document.getElementById("btn5");
+    var verde1 = document.getElementById("btn6");
+    var azul1 = document.getElementById("btn7");
+    var violeta1 = document.getElementById("btn8");
+    var gris1 = document.getElementById("btn9");
+    var blanco1 = document.getElementById("btn10");
+
+    negro1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "black";
+      num1 = 0;
+    }
+    cafe1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "brown";
+      num1 = 1;
+    }
+    rojo1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "red";
+      num1 = 2;
+    }
+    naranja1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "orange";
+      num1 = 3;
+    }
+    amarillo1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "yellow";
+      num1 = 4;
+    }
+    verde1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "green";
+      num1 = 5;
+    }
+    azul1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "blue";
+      num1 = 6;
+    }
+    violeta1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "violet";
+      num1 = 7;
+    }
+    gris1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "grey";
+      num1 = 8;
+    }
+    blanco1.onclick = function(e){
+      document.getElementById("franja_1").style.background= "white";
+      num1 = 9;
+    }
+  }
+
+  function franja2() {
+
+    var negro2 = document.getElementById("btn11");
+    var cafe2 = document.getElementById("btn12");
+    var rojo2 = document.getElementById("btn13");
+    var naranja2 = document.getElementById("btn14");
+    var amarillo2 = document.getElementById("btn15");
+    var verde2 = document.getElementById("btn16");
+    var azul2 = document.getElementById("btn17");
+    var violeta2 = document.getElementById("btn18");
+    var gris2 = document.getElementById("btn19");
+    var blanco2 = document.getElementById("btn20");
+
+    negro2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "black";
+      num2 = 0;
+    }
+    cafe2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "brown";
+      num2 = 1;
+    }
+    rojo2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "red";
+      num2 = 2;
+    }
+    naranja2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "orange";
+      num2 = 3;
+    }
+    amarillo2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "yellow";
+      num2 = 4;
+    }
+    verde2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "green";
+      num2 = 5;
+    }
+    azul2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "blue";
+      num2 = 6;
+    }
+    violeta2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "violet";
+      num2 = 7;
+    }
+    gris2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "grey";
+      num2 = 8;
+    }
+    blanco2.onclick = function(e){
+      document.getElementById("franja_2").style.background= "white";
+      num2 = 9;
+    }
+  }
+
+  function franja3() {
+
+    var negro3 = document.getElementById("btn21");
+    var cafe3 = document.getElementById("btn22");
+    var rojo3 = document.getElementById("btn23");
+    var naranja3 = document.getElementById("btn24");
+    var amarillo3 = document.getElementById("btn25");
+    var verde3 = document.getElementById("btn26");
+    var azul3 = document.getElementById("btn27");
+    var violeta3 = document.getElementById("btn28");
+    var gris3 = document.getElementById("btn29");
+    var blanco3 = document.getElementById("btn30");
+
+    negro3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "black";
+      num3 = 1;
+    }
+    cafe3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "brown";
+      num3 = 10;
+    }
+    rojo3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "red";
+      num3 = 100;
+    }
+    naranja3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "orange";
+      num3 = 1000;
+    }
+    amarillo3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "yellow";
+      num3 = 10000;
+    }
+    verde3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "green";
+      num3 = 100000;
+    }
+    azul3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "blue";
+      num3 = 1000000;
+    }
+    violeta3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "violet";
+      num3 = 10000000;
+    }
+    gris3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "grey";
+      num3 = 100000000;
+    }
+    blanco3.onclick = function(e){
+      document.getElementById("franja_3").style.background= "white";
+      num3 = 1000000000;
+    }
+  }
+
+  function calcular(){
+    var concatenar;
+    var operacion;
+
+    concatenar = num1.toString() + num2.toString();
+    operacion = parseFloat(concatenar) * parseFloat(num3);
+    document.Cal_Res.Resistencia.value = operacion;
+  }
+
+  function limpiar(){
+    document.Cal_Res.Resistencia.value = "";
+    document.getElementById("franja_1").style.background = "";
+    document.getElementById("franja_2").style.background = "";
+    document.getElementById("franja_3").style.background = "";
+  }
+</script>
+<div style="margin-top: 1%">
+<form name="Cal_Res" action="Calculadora Resistencias.html" method="post">
+  <div style="border-style: ridge; border-width: 5px; border-color: white; width: 66%; padding: 15px; margin: 0 0 5% 4%; background-color: #5D6D7E; float: left">
+    <h3 style="color: white">Primera Franja</h3>
+    <button type="button" class="btn" onclick="franja1()" id="btn1" style="background-color: black; color: white; width: 80px">Negro</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn2" style="background-color: brown; color: white; width: 80px">Cafe</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn3" style="background-color: red; color: white; width: 80px">Rojo</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn4" style="background-color: orange; color: white; width: 80px">Naranja</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn5" style="background-color: yellow; color: black; width: 80px">Amarillo</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn6" style="background-color: green; color: white; width: 80px">Verde</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn7" style="background-color: blue; color: white; width: 80px">Azul</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn8" style="background-color: violet; color: white; width: 80px">Violeta</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn9" style="background-color: grey; color: white; width: 80px">Gris</button>
+    <button type="button" class="btn" onclick="franja1()" id="btn10" style="background-color: white; color: black; width: 80px">Blanco</button>
+
+    <h3 style="color: white">Segunda Franja</h3>
+    <button type="button" class="btn" onclick="franja2()" id="btn11" style="background-color: black; color: white; width: 80px">Negro</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn12" style="background-color: brown; color: white; width: 80px">Cafe</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn13" style="background-color: red; color: white; width: 80px">Rojo</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn14" style="background-color: orange; color: white; width: 80px">Naranja</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn15" style="background-color: yellow; color: black; width: 80px">Amarillo</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn16" style="background-color: green; color: white; width: 80px">Verde</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn17" style="background-color: blue; color: white; width: 80px">Azul</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn18" style="background-color: violet; color: white; width: 80px">Violeta</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn19" style="background-color: grey; color: white; width: 80px">Gris</button>
+    <button type="button" class="btn" onclick="franja2()" id="btn20" style="background-color: white; color: black; width: 80px">Blanco</button>
+
+    <h3 style="color: white">Tercera Franja</h3>
+    <button type="button" class="btn" onclick="franja3()" id="btn21" style="background-color: black; color: white; width: 80px">Negro</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn22" style="background-color: brown; color: white; width: 80px">Cafe</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn23" style="background-color: red; color: white; width: 80px">Rojo</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn24" style="background-color: orange; color: white; width: 80px">Naranja</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn25" style="background-color: yellow; color: black; width: 80px">Amarillo</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn26" style="background-color: green; color: white; width: 80px">Verde</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn27" style="background-color: blue; color: white; width: 80px">Azul</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn28" style="background-color: violet; color: white; width: 80px">Violeta</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn29" style="background-color: grey; color: white; width: 80px">Gris</button>
+    <button type="button" class="btn" onclick="franja3()" id="btn30" style="background-color: white; color: black; width: 80px">Blanco</button>
+
+    <div style="border-style: solid; border-width: 1px; float: left; border-color: black; width: 20%; height: 60px; margin: 3% 0 0 40%; background-color: #FAE5D3">
+      <div  id="franja_1" style=" width: 25px; height: 100%; float: left; margin-left: 10%"></div>
+      <div  id="franja_2" style=" width: 25px; height: 100%; float: left; margin-left: 15%"></div>
+      <div  id="franja_3" style=" width: 25px; height: 100%; float: left; margin-left: 15%"></div>
+    </div>
+  </div>
+
+  <div style="border-style: ridge; border-width: 5px; border-color: white; width: 20%; padding: 15px; margin: 0 5% 5% 5%; background-color: #5D6D7E; float: left">
+    <div class="form-group" style="padding-left: 2%">
+      <h4 style="color: white; padding-top: 1%; margin-left: 10%">
+        <label for="Resistencia">Valor Resistencia</label>
+      </h4>
+      <input type="text" class="form-control" id="Resistencia" style="border-style: solid; border-width: 1px; border-color: white; background-color: transparent; width: 80%; color: white; margin-left: 10%">
+      <button type="button" class="btn btn-primary" onclick="calcular()" style="width: 120px; margin: 10% 0 1% 20%">Calcular</button>
+      <button type="button" class="btn btn-primary" onclick="limpiar()" style="width: 120px; margin: 10% 0 1% 20%">limpiar</button>
+  </div>
+  </div>
+</form>
+</div>
+</body>
+
+  <footer class="py-4 bg-dark text-white-50" style="clear: left">
+    <div style="float: left; margin-left: 5%">
+      Copyright (C) Tesla Electronics 2019 - Todos los derechos Reservados.
+    </div>
+    <div align = "right" style="margin-right: 5%">
+      <a class="fb-ic mr-3" role="button" href="https://es-la.facebook.com"><i class="fab fa-lg fa-facebook-f"></i></a>
+      <a class="tw-ic mr-3" role="button" href="https://twitter.com"><i class="fab fa-lg fa-twitter"></i></a>
+      <a class="ins-ic mr-3" role="button" href="https://www.instagram.com"><i class="fab fa-lg fa-instagram"></i></a>
+    </div>
+  </footer>
+  </html>
